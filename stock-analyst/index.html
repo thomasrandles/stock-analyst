@@ -524,7 +524,7 @@
 <header>
   <div class="logo-icon">📈</div>
   <h1>Stock Analyst</h1>
-  <span>powered by claude</span>
+  <span>claude + web search</span>
 </header>
 
 <div class="layout">
@@ -732,7 +732,7 @@ Use real, current data from web search. If a metric is unavailable, use "N/A" wi
     }, 2200);
 
     try {
-      const response = await fetch("/api/analyze", {
+      const response = await fetch("/.netlify/functions/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
